@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative Flow Advertising provides digital presence consulting with AI integration for Durango businesses. From foundational digital strategies to advanced AI solutions.">
+    <title>Services | Creative Flow Advertising | Durango, CO</title>
+    
+    <!-- Font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #D2CCEB; /* Soft Lavender */
+            --primary-dark: #b0a8d8; /* Darker Lavender for hover states */
+            --secondary-color: #D4DBF0; /* Sky Mist */
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-gray: #f5f5f7;
+            --medium-gray: #86868b;
+            --dark-gray: #1d1d1f;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.009em;
+        }
+        
+        h1 {
+            font-size: 56px;
+            line-height: 1.07143;
+            letter-spacing: -0.005em;
+        }
+        
+        h2 {
+            font-size: 48px;
+            line-height: 1.08349;
+            letter-spacing: -0.003em;
+        }
+        
+        h3 {
+            font-size: 32px;
+            line-height: 1.16667;
+            letter-spacing: 0.004em;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: #9f97d7;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .wide-container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+        }
+        
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        /* Services Page Styles */
+        .page-header {
+            background-color: var(--light-gray);
+            padding: 160px 0 80px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            font-size: 21px;
+            line-height: 1.381;
+            letter-spacing: 0.011em;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services-intro {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .services-intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .services-intro p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--medium-gray);
+        }
+
+        .services-intro p strong {
+            color: var(--dark-gray);
+        }
+
+        /* Service Categories */
+        .service-category {
+            padding: 80px 0;
+        }
+
+        .service-category:nth-child(odd) {
+            background-color: var(--light-gray);
+        }
+
+        .service-category-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .service-category-title {
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .service-category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .service-category-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--medium-gray);
+        }
+
+        /* Service Features */
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-feature {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .service-feature:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-category:nth-child(odd) .service-feature {
+            background-color: var(--white);
+        }
+
+        .service-category:nth-child(even) .service-feature {
+            background-color: var(--light-gray);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .service-icon i {
+            font-size: 28px;
+            color: var(--white);
+        }
+
+        .service-feature-title {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .service-feature-description {
+            color: var(--medium-gray);
+        }
+
+        /* Packages Section */
+        .packages-section {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .packages-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .package {
+            background-color: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            height: 100%;
+        }
+
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .package-header {
+            background: linear-gradient(135deg, #9f97d7 0%, var(--primary-color) 100%);
+            padding: 30px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .package-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .package-subtitle {
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .package-content {
+            padding: 40px;
+        }
+
+        .package-description {
+            margin-bottom: 30px;
+            color: var(--medium-gray);
+        }
+
+        .package-features {
+            list-style: none;
+        }
+
+        .package-features li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #9f97d7;
+            font-weight: bold;
+        }
+
+        /* AI Coaching Section */
+        .coaching-section {
+            padding: 100px 0;
+        }
+
+        .coaching-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .coaching-header h2 {
+            margin-bottom: 20px;
+        }
+
+        .coaching-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .coaching-item {
+            background-color: var(--light-gray);
+            border-radius: 20px;
+            padding: 40px;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .coaching-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .coaching-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #9f97d7 0%, var(--primary-color) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+        }
+
+        .coaching-icon i {
+            font-size: 32px;
+            color: var(--white);
+        }
+
+        .coaching-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .coaching-description {
+            color: var(--medium-gray);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #9f97d7 0%, var(--primary-color) 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            color: var(--white);
+            margin-bottom: 30px;
+        }
+
+        .cta-content p {
+            color: var(--white);
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-btn {
+            background-color: var(--white);
+            color: var(--dark-gray);
+            border: none;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-btn.outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .cta-btn.outline:hover {
+            background-color: var(--white);
+            color: var(--dark-gray);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question h3 {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-answer-content {
+            padding-bottom: 25px;
+            color: var(--medium-gray);
+        }
+
+        .faq-item.active .faq-question {
+            background-color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 24px;
+            font-size: 20px;
+        }
+        
+        .footer-about p {
+            color: var(--medium-gray);
+            margin-bottom: 24px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--medium-gray);
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--medium-gray);
+            font-size: 12px;
+        }
+        
+        .footer-bottom a {
+            color: var(--medium-gray);
+            margin-left: 20px;
+            transition: var(--transition);
+        }
+        
+        .footer-bottom a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .fade-in-up-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .fade-in-up-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .fade-in-up-delay-3 {
+            animation-delay: 0.6s;
+        }
+        
+        /* Modern Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        header.scrolled {
+            box-shadow: var(--shadow-sm);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #9f97d7 0%, #D2CCEB 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Modern Navigation Menu */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--dark-gray);
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(210, 204, 235, 0.15);
+            color: var(--dark-gray);
+        }
+        
+        /* Mega Menu */
+        .nav-item {
+            position: relative;
+        }
+        
+        .mega-menu {
+            position: absolute;
+            top: calc(100% + 16px);
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 680px;
+            background-color: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            padding: 32px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 100;
+        }
+        
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: all;
+        }
+        
+        .mega-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 16px;
+            height: 16px;
+            background-color: var(--white);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1;
+        }
+        
+        .menu-title {
+            font-size: 14px;
+            color: var(--medium-gray);
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 12px;
+            transition: var(--transition);
+            margin-bottom: 8px;
+        }
+        
+        .menu-item:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .menu-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+        
+        .menu-icon i {
+            font-size: 20px;
+            color: var(--white);
+        }
+        
+        .menu-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .menu-content p {
+            font-size: 14px;
+            color: var(--medium-gray);
+            margin-bottom: 0;
+        }
+        
+        /* Account and CTA buttons */
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .account-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+        
+        .account-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile Toggle */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--dark-gray);
+            font-size: 24px;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background-color: var(--white);
+            padding: 32px 24px;
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+            z-index: 999;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-menu {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .mobile-nav-item {
+            margin-bottom: 8px;
+        }
+        
+        .mobile-nav-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            border-radius: 12px;
+            background-color: var(--light-gray);
+            font-weight: 600;
+        }
+        
+        .mobile-dropdown-content {
+            padding: 0 12px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-dropdown-content.active {
+            max-height: 500px;
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .mobile-menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-item:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .mobile-account {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .mobile-account .btn {
+            width: 100%;
+        }
+        
+        /* Updated Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: var(--dark-gray);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: var(--primary-dark);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn:hover::after {
+            height: 100%;
+        }
+        
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 18px;
+        }
+        
+        .btn-transparent {
+            background-color: transparent;
+            color: var(--dark-gray);
+            border: 1px solid var(--dark-gray);
+        }
+        
+        .btn-transparent:hover {
+            background-color: var(--dark-gray);
+            color: var(--white);
+        }
+        
+        .btn-transparent::after {
+            background-color: var(--dark-gray);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .mega-menu {
+                width: 520px;
+            }
+            
+            .service-features, .coaching-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu, .nav-buttons {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+            
+            h2 {
+                font-size: 36px;
+            }
+
+            .section-padding {
+                padding: 80px 0;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-features, .coaching-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Modern Header with Mega Menu -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Creative Flow</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <div class="menu-title">Our Solutions</div>
+                            <a href="services.html#ai-training" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>AI Training</h4>
+                                    <p>Learn to leverage AI tools effectively</p>
+                                </div>
+                            </a>
+                            <a href="services.html#ai-marketing" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>AI-Powered Marketing</h4>
+                                    <p>Data-driven strategies for growth</p>
+                                </div>
+                            </a>
+                            <a href="services.html#business-growth" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>Business Growth Program</h4>
+                                    <p>Comprehensive scaling solutions</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu-column">
+                            <div class="menu-title">Resources</div>
+                            <a href="content-calendar.html" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>Content Calendar</h4>
+                                    <p>Plan your content strategy</p>
+                                </div>
+                            </a>
+                            <a href="blog.html" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>Blog & Resources</h4>
+                                    <p>Latest insights and guides</p>
+                                </div>
+                            </a>
+                            <a href="faq.html" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>FAQ</h4>
+                                    <p>Answers to common questions</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="our-work.html" class="nav-link">Our Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <a href="account.html" class="account-button">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="contact.html" class="btn">Get Started</a>
+            </div>
+            
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <div class="mobile-nav-link dropdown-toggle" id="services-toggle">
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-dropdown-content" id="services-dropdown">
+                    <a href="services.html#ai-training" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>AI Training</h4>
+                            <p>Learn to leverage AI tools effectively</p>
+                        </div>
+                    </a>
+                    <a href="services.html#ai-marketing" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>AI-Powered Marketing</h4>
+                            <p>Data-driven strategies for growth</p>
+                        </div>
+                    </a>
+                    <a href="services.html#business-growth" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Business Growth Program</h4>
+                            <p>Comprehensive scaling solutions</p>
+                        </div>
+                    </a>
+                    <a href="content-calendar.html" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Content Calendar</h4>
+                            <p>Plan your content strategy</p>
+                        </div>
+                    </a>
+                    <a href="blog.html" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Blog & Resources</h4>
+                            <p>Latest insights and guides</p>
+                        </div>
+                    </a>
+                    <a href="faq.html" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>FAQ</h4>
+                            <p>Answers to common questions</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="our-work.html" class="mobile-nav-link">Our Work</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+        </ul>
+        
+        <div class="mobile-account">
+            <a href="account.html" class="btn btn-transparent">My Account</a>
+            <a href="contact.html" class="btn">Get Started</a>
+        </div>
+    </div>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Digital Presence Consulting with AI Integration to elevate your business to new heights</p>
+        </div>
+    </section>
+    
+    <!-- Services Introduction -->
+    <section class="services-intro">
+        <div class="container">
+            <div class="services-intro-content">
+                <p>At <strong>Creative Flow Advertising</strong>, we specialize in helping businesses build, refine, and optimize their digital presence through <strong>strategic consulting and AI-driven solutions</strong>. Whether you are a small business establishing your online identity or a growing company ready for full-scale AI integration, our approach is tailored to meet you where you are.</p>
+                <p>Our services are designed to <strong>streamline operations, enhance marketing performance, and create a seamless digital experience</strong> that aligns with your business goals. With a range of service packages, from foundational digital strategies to advanced AI-powered solutions, we provide businesses with the tools and expertise needed to stay competitive in an evolving digital landscape.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Strategic Digital Presence Development -->
+    <section id="digital-presence" class="service-category">
+        <div class="container">
+            <div class="service-category-header">
+                <h2 class="service-category-title">Strategic Digital Presence Development</h2>
+                <p class="service-category-description">For businesses in need of <strong>a structured approach to online branding, customer engagement, and marketing automation</strong>, we provide customized solutions that align with your objectives.</p>
+            </div>
+            
+            <div class="service-features">
+                <div class="service-feature fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="service-feature-title">Digital Audits & Competitor Analysis</h3>
+                    <p class="service-feature-description">We thoroughly assess your current digital footprint and identify areas for growth. Our team analyzes your competitors to understand market positioning and discover opportunities for differentiation and improvement.</p>
+                </div>
+                
+                <div class="service-feature fade-in-up fade-in-up-delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="service-feature-title">Brand Positioning & Online Strategy</h3>
+                    <p class="service-feature-description">Develop a clear and consistent brand identity across all digital channels. We create comprehensive strategies that align with your business goals and resonate with your target audience.</p>
+                </div>
+                
+                <div class="service-feature fade-in-up fade-in-up-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="service-feature-title">SEO & Content Strategy</h3>
+                    <p class="service-feature-description">Build a framework for visibility and organic growth. Our team creates data-driven content plans that improve search rankings and engage your audience with valuable, relevant information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI-Powered Business & Marketing Automation -->
+    <section id="ai-marketing" class="service-category">
+        <div class="container">
+            <div class="service-category-header">
+                <h2 class="service-category-title">AI-Powered Business & Marketing Automation</h2>
+                <p class="service-category-description">Leveraging AI, we help businesses implement <strong>automated workflows, predictive analytics, and intelligent customer interactions</strong> that save time and enhance efficiency.</p>
+            </div>
+            
+            <div class="service-features">
+                <div class="service-feature fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="service-feature-title">AI-Driven Market Insights</h3>
+                    <p class="service-feature-description">Use data analytics to identify customer behavior patterns and optimize marketing strategies. Our AI tools uncover valuable insights that inform decision-making and campaign optimization.</p>
+                </div>
+                
+                <div class="service-feature fade-in-up fade-in-up-delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="service-feature-title">Automation for Productivity</h3>
+                    <p class="service-feature-description">Implement AI tools for scheduling, email marketing, and customer service. We streamline repetitive tasks and create efficient workflows that free up your team to focus on strategic activities.</p>
+                </div>
+                
+                <div class="service-feature fade-in-up fade-in-up-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="service-feature-title">Custom AI Integration</h3>
+                    <p class="service-feature-description">Tailor AI-driven solutions for businesses looking to scale with predictive analytics and process automation. We create personalized implementations that address your specific business challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <div class="container">
+            <div class="packages-header">
+                <h2>Scalable Digital Packages</h2>
+                <p>From Foundational to Advanced AI Integration</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package fade-in-up">
+                    <div class="package-header">
+                        <h3 class="package-title">Foundational Digital Growth</h3>
+                        <p class="package-subtitle">Establish your digital presence</p>
+                    </div>
+                    <div class="package-content">
+                        <p class="package-description">Ideal for businesses needing website optimization, content strategy, and SEO implementation to establish a strong digital presence.</p>
+                        <ul class="package-features">
+                            <li>Website optimization and performance enhancements</li>
+                            <li>Basic SEO implementation and keyword strategy</li>
+                            <li>Content calendar and publishing schedule</li>
+                            <li>Social media profile optimization</li>
+                            <li>Google Business Profile setup and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="package fade-in-up fade-in-up-delay-1">
+                    <div class="package-header">
+                        <h3 class="package-title">Growth & Engagement</h3>
+                        <p class="package-subtitle">Enhance customer connections</p>
+                    </div>
+                    <div class="package-content">
+                        <p class="package-description">Designed for businesses looking to enhance customer engagement, improve conversion rates, and streamline content automation.</p>
+                        <ul class="package-features">
+                            <li>Advanced SEO strategy and implementation</li>
+                            <li>Email marketing automation setup</li>
+                            <li>Social media content calendar with AI suggestions</li>
+                            <li>Customer journey mapping and optimization</li>
+                            <li>Conversion rate optimization for websites</li>
+                            <li>Basic AI content creation workflows</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="package fade-in-up fade-in-up-delay-2">
+                    <div class="package-header">
+                        <h3 class="package-title">AI-Enhanced Digital Strategy</h3>
+                        <p class="package-subtitle">Leverage predictive intelligence</p>
+                    </div>
+                    <div class="package-content">
+                        <p class="package-description">For organizations ready to integrate AI for predictive marketing, automation, and advanced analytics.</p>
+                        <ul class="package-features">
+                            <li>AI-powered content creation and optimization</li>
+                            <li>Predictive analytics for marketing campaigns</li>
+                            <li>Automated customer segmentation</li>
+                            <li>Personalized customer experience workflows</li>
+                            <li>AI chatbot integration for customer service</li>
+                            <li>Data-driven marketing strategy development</li>
+                            <li>Cross-channel campaign automation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="package fade-in-up fade-in-up-delay-3">
+                    <div class="package-header">
+                        <h3 class="package-title">Full AI-Driven Digital Optimization</h3>
+                        <p class="package-subtitle">Comprehensive AI integration</p>
+                    </div>
+                    <div class="package-content">
+                        <p class="package-description">A comprehensive solution that combines high-level automation, AI-powered decision-making, and business process enhancements.</p>
+                        <ul class="package-features">
+                            <li>End-to-end business process automation</li>
+                            <li>Advanced AI-powered marketing strategy</li>
+                            <li>Predictive analytics for business forecasting</li>
+                            <li>Custom AI tool development and integration</li>
+                            <li>Comprehensive digital transformation planning</li>
+                            <li>AI-driven competitive analysis</li>
+                            <li>Continuous optimization using machine learning</li>
+                            <li>Strategic AI implementation roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Coaching Section -->
+    <section id="ai-training" class="coaching-section">
+        <div class="container">
+            <div class="coaching-header">
+                <h2>Custom AI Coaching & Training</h2>
+                <p>For Business Leaders and Teams</p>
+            </div>
+            
+            <div class="coaching-grid">
+                <div class="coaching-item fade-in-up">
+                    <div class="coaching-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="coaching-title">One-on-One AI Coaching</h3>
+                    <p class="coaching-description">Helping business owners and teams leverage AI for content, marketing, and automation. Our personalized sessions focus on your specific needs and business goals, with practical applications you can implement immediately.</p>
+                </div>
+                
+                <div class="coaching-item fade-in-up fade-in-up-delay-1">
+                    <div class="coaching-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="coaching-title">AI Workflow Optimization</h3>
+                    <p class="coaching-description">Streamlining operational processes through AI-powered automation. We'll analyze your current workflows, identify inefficiencies, and implement AI tools to increase productivity and reduce manual tasks.</p>
+                </div>
+                
+                <div class="coaching-item fade-in-up fade-in-up-delay-2">
+                    <div class="coaching-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="coaching-title">AI Strategy for Business Growth</h3>
+                    <p class="coaching-description">Custom consulting on integrating AI into sales, marketing, and customer experience strategies. Develop a comprehensive plan for using AI to drive business growth, enhance customer engagement, and gain competitive advantages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tailored Approach Section -->
+    <section class="service-category">
+        <div class="container">
+            <div class="service-category-header">
+                <h2 class="service-category-title">A Tailored Approach to Digital Success</h2>
+                <p class="service-category-description">We understand that <strong>no two businesses are the same</strong>. Our approach is to <strong>assess your current position, identify opportunities for growth, and implement solutions that align with your goals</strong>.</p>
+            </div>
+            
+            <div class="service-features">
+                <div class="service-feature fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="service-feature-title">Thorough Assessment</h3>
+                    <p class="service-feature-description">We begin with a comprehensive analysis of your current digital presence, business operations, and competitive landscape to understand your unique position.</p>
+                </div>
+                
+                <div class="service-feature fade-in-up fade-in-up-delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-map-signs"></i>
+                    </div>
+                    <h3 class="service-feature-title">Customized Strategy</h3>
+                    <p class="service-feature-description">Based on our assessment, we develop a tailored strategy that addresses your specific challenges and leverages your strengths to achieve your business objectives.</p>
+                </div>
+                
+                <div class="service-feature fade-in-up fade-in-up-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="service-feature-title">Collaborative Implementation</h3>
+                    <p class="service-feature-description">We work alongside your team to implement solutions, providing guidance and training to ensure you can maintain and build upon the improvements we make together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Digital Presence?</h2>
+                <p>Wherever you are in your digital journey, we are here to help you take the next step.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-btn">Schedule a Consultation</a>
+                    <a href="about.html" class="cta-btn outline">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our services and approach</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you customize your approach for different businesses?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>We begin with a thorough assessment of your current digital presence, business goals, and industry landscape. This allows us to develop a strategy that addresses your specific needs, whether you're just starting to establish your online presence or looking to integrate advanced AI solutions into your existing operations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need technical expertise to benefit from your AI solutions?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Not at all. Our services include training and ongoing support to ensure you can effectively utilize the tools we implement. We focus on making AI accessible and practical for businesses of all sizes, regardless of your team's technical background.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly can I expect to see results?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The timeline for results varies depending on your starting point and goals. Some improvements, like workflow automation and AI-assisted content creation, can show immediate benefits. Other aspects, such as SEO improvements and brand positioning, typically show substantial results within 3-6 months. We'll provide clear expectations based on your specific situation during our initial consultation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What makes your AI integration services different?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Our approach focuses on practical, business-focused applications of AI rather than just implementing technology for its own sake. We emphasize solutions that address real business challenges, improve efficiency, and drive growth. Additionally, as a local Durango business, we understand the unique needs of businesses in our community and provide personalized service that larger agencies often can't match.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I upgrade my package as my business grows?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Absolutely! Our service packages are designed to be scalable. Many clients start with our Foundational Digital Growth package and upgrade as their business expands and their digital needs evolve. We'll work with you to ensure a smooth transition between service levels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-about">
+                    <h3>Creative Flow</h3>
+                    <p>Connecting Durango Businesses with the World of Creative Marketing & AI.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="our-work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="content-calendar.html">Content Calendar</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>Durango, Colorado 81303</li>
+                        <li>United States</li>
+                        <li>(303) 903-8733</li>
+                        <li>Open: 09:00 am – 05:00 pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>Copyright © 2025 Creative Flow Advertising LLC - All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 30) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            if (mobileMenu.classList.contains('active')) {
+                mobileToggle.innerHTML = '<i class="fas fa-times"></i>';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Mobile dropdown toggle
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.id.replace('-toggle', '-dropdown');
+                const dropdownContent = document.getElementById(targetId);
+                
+                dropdownContent.classList.toggle('active');
+                
+                if (dropdownContent.classList.contains('active')) {
+                    toggle.querySelector('i').classList.replace('fa-chevron-down', 'fa-chevron-up');
+                } else {
+                    toggle.querySelector('i').classList.replace('fa-chevron-up', 'fa-chevron-down');
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
