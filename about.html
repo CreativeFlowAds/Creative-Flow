@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Creative Flow Advertising, our mission to empower Durango businesses with AI-driven marketing, and the stories of our founders Kahlil and Wes.">
+    <title>About Us | Creative Flow Advertising | Durango, CO</title>
+    
+    <!-- Font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #D2CCEB; /* Soft Lavender */
+            --secondary-color: #D4DBF0; /* Sky Mist */
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-gray: #f5f5f7;
+            --medium-gray: #86868b;
+            --dark-gray: #1d1d1f;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.009em;
+        }
+        
+        h1 {
+            font-size: 56px;
+            line-height: 1.07143;
+            letter-spacing: -0.005em;
+        }
+        
+        h2 {
+            font-size: 48px;
+            line-height: 1.08349;
+            letter-spacing: -0.003em;
+        }
+        
+        h3 {
+            font-size: 32px;
+            line-height: 1.16667;
+            letter-spacing: 0.004em;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: #9f97d7;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .wide-container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+        }
+        
+        .section-padding {
+            padding: 120px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: var(--dark-gray);
+            border: none;
+            border-radius: 980px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            background-color: #bdb5e0;
+            transform: scale(1.03);
+        }
+        
+        .btn-large {
+            padding: 18px 36px;
+            font-size: 1.1rem;
+        }
+        
+        .btn-transparent {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-transparent:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-gray);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background-color 0.5s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 36px;
+        }
+        
+        .nav-menu a {
+            position: relative;
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--dark-gray);
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background-color: var(--light-gray);
+            padding: 160px 0 80px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            font-size: 21px;
+            line-height: 1.381;
+            letter-spacing: 0.011em;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 120px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        .section-title h2 {
+            margin-bottom: 16px;
+        }
+        
+        .section-title p {
+            font-size: 21px;
+            line-height: 1.381;
+            letter-spacing: 0.011em;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .mission-statement {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            text-align: center;
+            font-size: 21px;
+            line-height: 1.381;
+            background-color: var(--light-gray);
+            padding: 60px;
+            border-radius: 20px;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+        
+        .mission-statement h3 {
+            margin-bottom: 24px;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 120px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            animation: fadeInUp 1s ease forwards;
+            opacity: 0;
+        }
+        
+        .team-member:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+        
+        .team-member:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover .team-image img {
+            transform: scale(1.05);
+        }
+        
+        .team-content {
+            padding: 40px;
+        }
+        
+        .team-name {
+            margin-bottom: 8px;
+        }
+        
+        .team-role {
+            color: var(--medium-gray);
+            margin-bottom: 24px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        /* Values Section */
+        .values-section {
+            padding: 120px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .value-card {
+            padding: 40px;
+            border-radius: 20px;
+            background-color: var(--light-gray);
+            text-align: center;
+            transition: var(--transition);
+            animation: fadeInUp 1s ease forwards;
+            opacity: 0;
+        }
+        
+        .value-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        
+        .value-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        
+        .value-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+        }
+        
+        .value-icon i {
+            font-size: 32px;
+            color: var(--white);
+        }
+        
+        .value-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 24px;
+            font-size: 20px;
+        }
+        
+        .footer-about p {
+            color: var(--medium-gray);
+            margin-bottom: 24px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--medium-gray);
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--medium-gray);
+            font-size: 12px;
+        }
+        
+        .footer-bottom a {
+            color: var(--medium-gray);
+            margin-left: 20px;
+            transition: var(--transition);
+        }
+        
+        .footer-bottom a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 42px;
+            }
+            
+            h2 {
+                font-size: 36px;
+            }
+            
+            .section-padding {
+                padding: 80px 0;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 0;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 20px 0;
+            }
+            
+            .nav-menu a {
+                font-size: 18px;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .mission-statement {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .footer-bottom-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .footer-bottom a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span>Creative Flow</span>
+                </a>
+            </div>
+            
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="our-work.html">Our Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="content-calendar.html">Content Calendar</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Meet the team behind Creative Flow Advertising and discover our mission to empower Durango businesses.</p>
+        </div>
+    </section>
+    
+    <!-- Mission Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission</h2>
+                <p>The driving force behind everything we do</p>
+            </div>
+            
+            <div class="mission-statement">
+                <h3>Empowering Local Businesses</h3>
+                <p>At Creative Flow Advertising, our mission is to empower Durango's local businesses by leveraging the transformative power of AI, making cutting-edge tools accessible to simplify operations, improve efficiency, and unlock growth potential.</p>
+                <p>We believe that every business, regardless of size, deserves access to the most innovative marketing strategies and technologies available. By bridging the gap between advanced AI solutions and local entrepreneurship, we help our community thrive in an increasingly digital marketplace.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The creative minds behind Creative Flow Advertising</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="/api/placeholder/600/400" alt="Kahlil, Co-founder of Creative Flow Advertising">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Kahlil</h3>
+                        <p class="team-role">Co-Founder & Marketing Strategist</p>
+                        <p>Kahlil's name means "trustworthy or loyal friend," a trait he embodies both personally and professionally. Embracing the uniqueness of his name, Kahlil strives to bring a sense of friendship and loyalty to his work, aiming to assist family-owned and local businesses in Durango that may be lagging in marketing.</p>
+                        <p>He believes every business deserves to showcase their craft, art, or service, and he is dedicated to helping them shine a light on what they hold dearest.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="/api/placeholder/600/400" alt="Wes, Co-founder of Creative Flow Advertising">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Wes</h3>
+                        <p class="team-role">Co-Founder & Creative Director</p>
+                        <p>Born and raised in Colorado, Wes is a Fort Lewis College graduate with a passion for adventure and storytelling. His diverse experiences range from leading wilderness expeditions to capturing moments in the Himalayas.</p>
+                        <p>As an educator, digital marketer, and creative storyteller, Wes aims to inspire growth and authentic connections. He believes every story deserves to be told with purpose and passion, and through education, media, and outdoor exploration, he empowers others to share their unique journeys.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide our approach to business and client relationships</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Local Partnership</h3>
+                    <p>We're not just service providers; we're your neighbors invested in your success. Our deep roots in the Durango community inform everything we do.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="value-title">Creative Innovation</h3>
+                    <p>We constantly explore the cutting edge of marketing technology, bringing fresh ideas and innovative solutions to help your business stand out.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="value-title">Measurable Results</h3>
+                    <p>We believe in transparency and accountability. Every strategy we implement is tracked, measured, and optimized to deliver tangible business outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action Section -->
+    <section class="section-padding" style="background-color: var(--primary-color);">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 24px;">Ready to Transform Your Business?</h2>
+            <p style="margin-bottom: 40px; font-size: 21px; max-width: 700px; margin-left: auto; margin-right: auto;">Let's work together to elevate your brand and connect with your audience through innovative marketing strategies.</p>
+            <a href="contact.html" class="btn btn-large" style="background-color: var(--white); color: var(--dark-gray);">Get a Free Consultation</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-about">
+                    <h3>Creative Flow</h3>
+                    <p>Connecting Durango Businesses with the World of Creative Marketing & AI.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="our-work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="content-calendar.html">Content Calendar</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>Durango, Colorado 81303</li>
+                        <li>United States</li>
+                        <li>(303) 903-8733</li>
+                        <li>Open: 09:00 am – 05:00 pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>Copyright © 2025 Creative Flow Advertising LLC - All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+            }
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
