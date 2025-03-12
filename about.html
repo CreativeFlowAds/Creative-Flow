@@ -7,6 +7,7 @@
     <title>About Us | Creative Flow Advertising | Durango, CO</title>
     
     <!-- Font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     
@@ -16,13 +17,17 @@
     <style>
         :root {
             --primary-color: #D2CCEB; /* Soft Lavender */
+            --primary-dark: #b0a8d8; /* Darker Lavender for hover states */
             --secondary-color: #D4DBF0; /* Sky Mist */
             --white: #FFFFFF;
             --black: #000000;
             --light-gray: #f5f5f7;
             --medium-gray: #86868b;
             --dark-gray: #1d1d1f;
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
         }
         
         * {
@@ -94,109 +99,6 @@
         
         .section-padding {
             padding: 120px 0;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--primary-color);
-            color: var(--dark-gray);
-            border: none;
-            border-radius: 980px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .btn:hover {
-            background-color: #bdb5e0;
-            transform: scale(1.03);
-        }
-        
-        .btn-large {
-            padding: 18px 36px;
-            font-size: 1.1rem;
-        }
-        
-        .btn-transparent {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-        
-        .btn-transparent:hover {
-            background-color: var(--primary-color);
-            color: var(--dark-gray);
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            transition: background-color 0.5s ease;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-        }
-        
-        .logo a {
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-menu li {
-            margin-left: 36px;
-        }
-        
-        .nav-menu a {
-            position: relative;
-            font-weight: 400;
-            font-size: 14px;
-            color: var(--dark-gray);
-        }
-        
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: var(--primary-color);
-            transition: var(--transition);
-        }
-        
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--dark-gray);
         }
         
         /* Page Header */
@@ -519,36 +421,6 @@
                 padding: 80px 0;
             }
             
-            .nav-menu {
-                position: fixed;
-                top: 60px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 60px);
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 40px 0;
-                transition: var(--transition);
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-menu li {
-                margin: 20px 0;
-            }
-            
-            .nav-menu a {
-                font-size: 18px;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
             .team-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -589,34 +461,542 @@
                 margin: 0 10px;
             }
         }
+        
+        /* Modern Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        header.scrolled {
+            box-shadow: var(--shadow-sm);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        
+        .
+        logo {
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #9f97d7 0%, #D2CCEB 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Modern Navigation Menu */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--dark-gray);
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(210, 204, 235, 0.15);
+            color: var(--dark-gray);
+        }
+        
+        /* Mega Menu */
+        .nav-item {
+            position: relative;
+        }
+        
+        .mega-menu {
+            position: absolute;
+            top: calc(100% + 16px);
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 680px;
+            background-color: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            padding: 32px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 100;
+        }
+        
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: all;
+        }
+        
+        .mega-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 16px;
+            height: 16px;
+            background-color: var(--white);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1;
+        }
+        
+        .menu-title {
+            font-size: 14px;
+            color: var(--medium-gray);
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 12px;
+            transition: var(--transition);
+            margin-bottom: 8px;
+        }
+        
+        .menu-item:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .menu-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+        
+        .menu-icon i {
+            font-size: 20px;
+            color: var(--white);
+        }
+        
+        .menu-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .menu-content p {
+            font-size: 14px;
+            color: var(--medium-gray);
+            margin-bottom: 0;
+        }
+        
+        /* Account and CTA buttons */
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .account-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+        
+        .account-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile Toggle */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--dark-gray);
+            font-size: 24px;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background-color: var(--white);
+            padding: 32px 24px;
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+            z-index: 999;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-menu {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .mobile-nav-item {
+            margin-bottom: 8px;
+        }
+        
+        .mobile-nav-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            border-radius: 12px;
+            background-color: var(--light-gray);
+            font-weight: 600;
+        }
+        
+        .mobile-dropdown-content {
+            padding: 0 12px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-dropdown-content.active {
+            max-height: 500px;
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .mobile-menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-item:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .mobile-account {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .mobile-account .btn {
+            width: 100%;
+        }
+        
+        /* Updated Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: var(--dark-gray);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: var(--primary-dark);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn:hover::after {
+            height: 100%;
+        }
+        
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 18px;
+        }
+        
+        .btn-transparent {
+            background-color: transparent;
+            color: var(--dark-gray);
+            border: 1px solid var(--dark-gray);
+        }
+        
+        .btn-transparent:hover {
+            background-color: var(--dark-gray);
+            color: var(--white);
+        }
+        
+        .btn-transparent::after {
+            background-color: var(--dark-gray);
+        }
+        
+        /* Responsive Navigation */
+        @media (max-width: 1024px) {
+            .mega-menu {
+                width: 520px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu, .nav-buttons {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <!-- Modern Header with Mega Menu -->
+    <header id="header">
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <span>Creative Flow</span>
+                    <span class="logo-text">Creative Flow</span>
                 </a>
             </div>
             
-            <button class="mobile-toggle">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Services</a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <div class="menu-title">Our Solutions</div>
+                            <a href="services.html#ai-training" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>AI Training</h4>
+                                    <p>Learn to leverage AI tools effectively</p>
+                                </div>
+                            </a>
+                            <a href="services.html#ai-marketing" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>AI-Powered Marketing</h4>
+                                    <p>Data-driven strategies for growth</p>
+                                </div>
+                            </a>
+                            <a href="services.html#business-growth" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>Business Growth Program</h4>
+                                    <p>Comprehensive scaling solutions</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu-column">
+                            <div class="menu-title">Resources</div>
+                            <a href="content-calendar.html" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>Content Calendar</h4>
+                                    <p>Plan your content strategy</p>
+                                </div>
+                            </a>
+                            <a href="blog.html" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>Blog & Resources</h4>
+                                    <p>Latest insights and guides</p>
+                                </div>
+                            </a>
+                            <a href="faq.html" class="menu-item">
+                                <div class="menu-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="menu-content">
+                                    <h4>FAQ</h4>
+                                    <p>Answers to common questions</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="our-work.html" class="nav-link">Our Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <a href="account.html" class="account-button">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="contact.html" class="btn">Get Started</a>
+            </div>
+            
+            <button class="mobile-toggle" id="mobile-toggle">
                 <i class="fas fa-bars"></i>
             </button>
-            
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="our-work.html">Our Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="content-calendar.html">Content Calendar</a></li>
-                <li><a href="account.html">Account</a></li>
-            </ul>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <div class="mobile-nav-link dropdown-toggle" id="services-toggle">
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-dropdown-content" id="services-dropdown">
+                    <a href="services.html#ai-training" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>AI Training</h4>
+                            <p>Learn to leverage AI tools effectively</p>
+                        </div>
+                    </a>
+                    <a href="services.html#ai-marketing" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>AI-Powered Marketing</h4>
+                            <p>Data-driven strategies for growth</p>
+                        </div>
+                    </a>
+                    <a href="services.html#business-growth" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Business Growth Program</h4>
+                            <p>Comprehensive scaling solutions</p>
+                        </div>
+                    </a>
+                    <a href="content-calendar.html" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Content Calendar</h4>
+                            <p>Plan your content strategy</p>
+                        </div>
+                    </a>
+                    <a href="blog.html" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Blog & Resources</h4>
+                            <p>Latest insights and guides</p>
+                        </div>
+                    </a>
+                    <a href="faq.html" class="mobile-menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>FAQ</h4>
+                            <p>Answers to common questions</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="our-work.html" class="mobile-nav-link">Our Work</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+        </ul>
+        
+        <div class="mobile-account">
+            <a href="account.html" class="btn btn-transparent">My Account</a>
+            <a href="contact.html" class="btn">Get Started</a>
+        </div>
+    </div>
     
     <!-- Page Header -->
     <section class="page-header">
@@ -625,7 +1005,6 @@
             <p>Meet the team behind Creative Flow Advertising and discover our mission to empower Durango businesses.</p>
         </div>
     </section>
-    
     <!-- Mission Section -->
     <section class="about-section">
         <div class="container">
@@ -779,25 +1158,47 @@
     </footer>
     
     <script>
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileToggle.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 30) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
         
-        // Header background change on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            if (mobileMenu.classList.contains('active')) {
+                mobileToggle.innerHTML = '<i class="fas fa-times"></i>';
+                document.body.style.overflow = 'hidden';
             } else {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = '';
             }
+        });
+        
+        // Mobile dropdown toggle
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.id.replace('-toggle', '-dropdown');
+                const dropdownContent = document.getElementById(targetId);
+                
+                dropdownContent.classList.toggle('active');
+                
+                if (dropdownContent.classList.contains('active')) {
+                    toggle.querySelector('i').classList.replace('fa-chevron-down', 'fa-chevron-up');
+                } else {
+                    toggle.querySelector('i').classList.replace('fa-chevron-up', 'fa-chevron-down');
+                }
+            });
         });
         
         // Animation on scroll
